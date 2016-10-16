@@ -1,0 +1,7 @@
+lib/egl/libGLES_mali.so
+lib/hw/gralloc.hi6210sft
+lib/libion.so
+
+lib64/egl/libGLES_mali.so
+lib64/hw/gralloc.hi6210sft
+lib64/libion.so
