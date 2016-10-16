@@ -42,6 +42,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     	persist.sys.strictmode.disable=1 \
     	persist.sys.use_dithering=2
 
+# Kernel
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+	LOCAL_KERNEL := device/huawei/hi6210sft/kernel
+else
+	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += \
+    	$(LOCAL_KERNEL):kernel
+
 # Misc
 PRODUCT_PACKAGES += \
     	Torch \
