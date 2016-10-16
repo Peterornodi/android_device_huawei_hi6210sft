@@ -7,6 +7,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    	bt_vendor.conf \
+    	libbt-vendor
+
 # Codecs
 PRODUCT_COPY_FILES += \
     	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
