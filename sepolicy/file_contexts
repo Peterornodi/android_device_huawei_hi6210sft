@@ -1,4 +1,4 @@
-/dev/mali0                              u:object_r:gpu_device:s0
+/dev/mali                               u:object_r:gpu_device:s0
 
 /dev/tc_ns_client                       u:object_r:tee_device:s0
 
