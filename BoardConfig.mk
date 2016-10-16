@@ -75,6 +75,14 @@ RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_FSTAB := device/huawei/hi6210sft/ramdisk/fstab.hi6210sft
 TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
 
+# Sepolicy
+BOARD_SEPOLICY_DIRS += \
+    device/huawei/hi6210sft/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    	file_contexts \
+    	installd.te
+
 # Shell
 TARGET_SHELL := ash
 
