@@ -45,6 +45,10 @@ COMMON_GLOBAL_CFLAGS += -DHAVE_ISO
 USE_CAMERA_STUB := false
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# CMHW
+BOARD_HARDWARE_CLASS := \
+    hardware/cyanogen/cmhw
+
 # Display
 TARGET_USE_PAN_DISPLAY := true
 
