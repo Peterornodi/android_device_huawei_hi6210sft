@@ -94,7 +94,7 @@ PRODUCT_PACKAGES += \
     	com.android.future.usb.accessory
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS := $(COMMON_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -120,6 +120,17 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/ramdisk/init.chip.hi6210sft.rc:root/init.chip.hi6210sft.rc \
 	$(LOCAL_PATH)/ramdisk/init.hi6210sft.rc:root/init.hi6210sft.rc \
 	$(LOCAL_PATH)/ramdisk/ueventd.hi6210sft.rc:root/ueventd.hi6210sft.rc \
+
+# Wifi
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/etc/wifi/hostapd_hisi.conf:system/etc/wifi/hostapd_hisi.conf \
+	$(LOCAL_PATH)/rootdir/etc/wifi/wpa_supplicant_hisi.conf:system/etc/wifi/wpa_supplicant_hisi.conf \
+
+PRODUCT_PACKAGES += \
+    	hostapd \
+    	libwpa_client \
+    	wpa_supplicant \
+    	wpa_supplicant.conf
 
 # Zygote
 ADDITIONAL_DEFAULT_PROPERTIES += ro.zygote=zygote64_32
