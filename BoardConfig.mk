@@ -86,6 +86,7 @@ BOARD_SEPOLICY_DIRS += \
     device/huawei/hi6210sft/sepolicy
 
 BOARD_SEPOLICY_UNION += \
+	110x_exec.te \
     	file_contexts \
     	installd.te
 
