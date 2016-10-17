@@ -13,6 +13,26 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+# Audio
+	$(LOCAL_PATH)/rootdir/etc/audio_effects.conf:system/etc/audio_effects.conf \
+	$(LOCAL_PATH)/rootdir/etc/audio_policy.conf:system/etc/audio_policy.conf \
+	$(LOCAL_PATH)/rootdir/etc/hisi_omx.cfg:system/etc/hisi_omx.cfg \
+	$(LOCAL_PATH)/rootdir/etc/media_codecs.xml:system/etc/media_codecs.xml \
+	$(LOCAL_PATH)/rootdir/etc/media_profiles.xml:system/etc/media_profiles.xml \
+
+PRODUCT_PACKAGES += \
+    	audio.a2dp.default \
+    	audio.primary.default \
+    	audio.r_submix.default \
+    	audio.usb.default \
+    	libaudioroute \
+    	libaudioutils \
+    	libtinyalsa \
+    	tinycap \
+    	tinymix \
+    	tinypcminfo \
+    	tinyplay
+
 # Binaries
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,device/huawei/hi6210sft/binaries,system/bin)
