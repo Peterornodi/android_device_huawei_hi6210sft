@@ -62,6 +62,9 @@ TARGET_HARDWARE_3D := true
 USE_OPENGL_RENDERER := true
 WITH_DEXPREOPT ?= true
 
+# Init
+TARGET_PROVIDES_INIT_RC := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := hisi_dma_print=0 vmalloc=384M maxcpus=8 coherent_pool=512K no_irq_affinity androidboot.selinux=disabled ate_enable=true
 
