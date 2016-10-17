@@ -3,6 +3,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
+# ADB
+PRODUCT_PROPERTY_OVERRIDES += \
+         debug.sf.no_hw_vsync=1 \
+         ro.adb.secure=0 \
+         ro.secure=0 \
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
