@@ -66,6 +66,16 @@ PRODUCT_PACKAGES += \
 # GPS
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/etc/globalAutoAdapt-conf.xml:system/etc/globalAutoAdapt-conf.xml \
+	$(LOCAL_PATH)/rootdir/etc/globalMatchs-conf.xml:system/etc/globalMatchs-conf.xml \
+	$(LOCAL_PATH)/rootdir/etc/goldeneye_config.xml:system/etc/goldeneye_config.xml \
+	$(LOCAL_PATH)/rootdir/etc/gps.conf:system/etc/gps.conf \
+	$(LOCAL_PATH)/rootdir/etc/gpsconfig.xml:system/etc/gpsconfig.xml \
+	$(LOCAL_PATH)/rootdir/etc/hisi_cfg.ini:system/etc/hisi_cfg.ini \
+	$(LOCAL_PATH)/rootdir/etc/hisi_cfg_alice.ini:system/etc/hisi_cfg_alice.ini \
+	$(LOCAL_PATH)/rootdir/etc/hisi_cfg_cherry.ini:system/etc/hisi_cfg_cherry.ini \
+
 # Graphics
 PRODUCT_PACKAGES += \
 	libGLES_mali

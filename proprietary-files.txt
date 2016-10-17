@@ -6,6 +6,12 @@ lib64/egl/libGLES_mali.so
 lib64/hw/gralloc.hi6210sft.so
 lib64/libion.so
 
+# GPS
+lib/hw/gps.hi110x.default.so
+
+lib64/hw/gps.hi110x.default.so
+lib64/hw/gps.hi6210sft.so
+
 # Wifi
 lib/libhisi_ini.so
 lib/libwifi_factory_test.so
