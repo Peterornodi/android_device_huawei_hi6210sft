@@ -13,6 +13,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+# Binaries
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,device/huawei/hi6210sft/binaries,system/bin)
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     	bt_vendor.conf \
