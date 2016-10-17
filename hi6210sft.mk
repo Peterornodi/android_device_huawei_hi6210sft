@@ -121,6 +121,10 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/ramdisk/init.hi6210sft.rc:root/init.hi6210sft.rc \
 	$(LOCAL_PATH)/ramdisk/ueventd.hi6210sft.rc:root/ueventd.hi6210sft.rc \
 
+# Teec
+PRODUCT_PACKAGES += \
+	libteec
+
 # Wifi
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/etc/wifi/hostapd_hisi.conf:system/etc/wifi/hostapd_hisi.conf \
