@@ -39,6 +39,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,device/huawei/hi6210sft/binaries,system/bin)
 
+# Blobs
+$(call inherit-product-if-exists, vendor/huawei/hi6210sft/hi6210sft-vendor.mk)
+PRODUCT_RESTRICT_VENDOR_FILES := false
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     	bt_vendor.conf \
