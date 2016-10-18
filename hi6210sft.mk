@@ -58,6 +58,14 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
+# CPU
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/etc/clatd.conf:system/etc/clatd.conf \
+	$(LOCAL_PATH)/rootdir/etc/core4_sys_load_policy.xml:system/etc/core4_sys_load_policy.xml \
+	$(LOCAL_PATH)/rootdir/etc/normal_cpu_policy.xml:system/etc/normal_cpu_policy.xml \
+	$(LOCAL_PATH)/rootdir/etc/performance_cpu_policy.xml:system/etc/performance_cpu_policy.xml \
+	$(LOCAL_PATH)/rootdir/etc/super_cpu_policy.xml:system/etc/super_cpu_policy.xml \
+
 # File System
 PRODUCT_PACKAGES += \
     	make_ext4fs \
