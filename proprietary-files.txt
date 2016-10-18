@@ -12,6 +12,25 @@ lib/hw/gps.hi110x.default.so
 lib64/hw/gps.hi110x.default.so
 lib64/hw/gps.hi6210sft.so
 
+# Sensors
+lib/hw/keystore.hi6210sft.so
+lib/hw/libbcmfm_if.so
+lib/hw/libhisifm_if.so
+lib/hw/lights.default.so
+lib/hw/local_time.default.so
+lib/hw/memtrack.hi6210sft.so
+lib/hw/power.default.so
+lib/hw/sensors.hi6210sft.so
+
+lib64/hw/keystore.hi6210sft.so
+lib64/hw/libbcmfm_if.so
+lib64/hw/libhisifm_if.so
+lib64/hw/lights.default.so
+lib64/hw/local_time.default.so
+lib64/hw/memtrack.hi6210sft.so
+lib64/hw/power.default.so
+lib64/hw/sensors.hi6210sft.so
+
 # Wifi
 lib/libhisi_ini.so
 lib/libwifi_factory_test.so
