@@ -44,6 +44,11 @@ PRODUCT_PACKAGES += \
     	bt_vendor.conf \
     	libbt-vendor
 
+# Chromium (to use only with Android 5.1.1 Lollipop)
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,device/huawei/hi6210sft/chromium/lib,system/lib) \
+	$(call find-copy-subdir-files,*,device/huawei/hi6210sft/chromium/lib64,system/lib64)
+
 # Codecs
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/etc/media_codecs.xml:system/etc/media_codecs.xml \
