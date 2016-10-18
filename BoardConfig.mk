@@ -65,6 +65,9 @@ TARGET_HARDWARE_3D := true
 USE_OPENGL_RENDERER := true
 WITH_DEXPREOPT ?= true
 
+# HealthD
+BOARD_HAL_STATIC_LIBRARIES += libhealthd.hi6210sft
+
 # Init
 TARGET_PROVIDES_INIT_RC := true
 
