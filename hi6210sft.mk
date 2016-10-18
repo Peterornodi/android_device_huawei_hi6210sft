@@ -111,6 +111,17 @@ PRODUCT_PACKAGES += \
     	Torch \
     	com.android.future.usb.accessory
 
+# Modem
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,device/huawei/hi6210sft/rootdir/etc/log,system/etc/log) \
+	$(call find-copy-subdir-files,*,device/huawei/hi6210sft/rootdir/etc/manufacture,system/etc/manufacture) \
+	$(call find-copy-subdir-files,*,device/huawei/hi6210sft/rootdir/etc/modemConfig,system/etc/modemConfig) \
+	$(LOCAL_PATH)/rootdir/etc/device_state_monitor.conf:system/etc/device_state_monitor.conf \
+	$(LOCAL_PATH)/rootdir/etc/factory_modem.cfg:system/etc/factory_modem.cfg \
+	$(LOCAL_PATH)/rootdir/etc/jankbdcfg.json:system/etc/jankbdcfg.json \
+	$(LOCAL_PATH)/rootdir/etc/jankcfg.json:system/etc/jankcfg.json \
+	$(LOCAL_PATH)/rootdir/etc/kerneldump.sh:system/etc/kerneldump.sh \
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
