@@ -58,6 +58,10 @@ $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 PRODUCT_TAGS += dalvik.gc.type-precise
 
+# DHCPCD
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/etc/dhcpcd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf
+
 # Display
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
