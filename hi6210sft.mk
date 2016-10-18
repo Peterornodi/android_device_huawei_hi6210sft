@@ -91,7 +91,9 @@ PRODUCT_COPY_FILES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
-	libGLES_mali
+	libGLES_android \
+	libGLES_mali \
+	libion
 
 PRODUCT_PROPERTY_OVERRIDES += \
     	debug.hwui.render_dirty_regions=false \
