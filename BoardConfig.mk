@@ -49,8 +49,8 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
 
 # CMHW
-BOARD_HARDWARE_CLASS := \
-    hardware/cyanogen/cmhw
+#BOARD_HARDWARE_CLASS := \
+#    hardware/cyanogen/cmhw
 
 # Display
 TARGET_USE_PAN_DISPLAY := true
@@ -60,16 +60,11 @@ EXTENDED_FONT_FOOTPRINT := true
 
 # Graphics
 ANDROID_ENABLE_RENDERSCRIPT := true
-BIONIC_TESTS ?= true
 TARGET_HARDWARE_3D := true
 USE_OPENGL_RENDERER := true
-WITH_DEXPREOPT ?= true
 
 # HealthD
-BOARD_HAL_STATIC_LIBRARIES += libhealthd.hi6210sft
-
-# Init
-TARGET_PROVIDES_INIT_RC := true
+#BOARD_HAL_STATIC_LIBRARIES += libhealthd.hi6210sft
 
 # Kernel
 BOARD_KERNEL_CMDLINE := hisi_dma_print=0 vmalloc=384M maxcpus=8 coherent_pool=512K no_irq_affinity androidboot.selinux=disabled ate_enable=true

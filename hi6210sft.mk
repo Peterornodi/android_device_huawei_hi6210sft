@@ -15,12 +15,12 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Audio
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/rootdir/etc/audio_effects.conf:system/etc/audio_effects.conf \
-	$(LOCAL_PATH)/rootdir/etc/audio_policy.conf:system/etc/audio_policy.conf \
-	$(LOCAL_PATH)/rootdir/etc/hisi_omx.cfg:system/etc/hisi_omx.cfg \
-	$(LOCAL_PATH)/rootdir/etc/media_codecs.xml:system/etc/media_codecs.xml \
-	$(LOCAL_PATH)/rootdir/etc/media_profiles.xml:system/etc/media_profiles.xml \
+#PRODUCT_COPY_FILES += \
+#	$(LOCAL_PATH)/rootdir/etc/audio_effects.conf:system/etc/audio_effects.conf \
+#	$(LOCAL_PATH)/rootdir/etc/audio_policy.conf:system/etc/audio_policy.conf \
+#	$(LOCAL_PATH)/rootdir/etc/hisi_omx.cfg:system/etc/hisi_omx.cfg \
+#	$(LOCAL_PATH)/rootdir/etc/media_codecs.xml:system/etc/media_codecs.xml \
+#	$(LOCAL_PATH)/rootdir/etc/media_profiles.xml:system/etc/media_profiles.xml \
 
 PRODUCT_PACKAGES += \
     	audio.a2dp.default \
@@ -40,8 +40,8 @@ PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,device/huawei/hi6210sft/binaries,system/bin)
 
 # Blobs
-$(call inherit-product-if-exists, vendor/huawei/hi6210sft/hi6210sft-vendor.mk)
-PRODUCT_RESTRICT_VENDOR_FILES := false
+#$(call inherit-product-if-exists, vendor/huawei/hi6210sft/hi6210sft-vendor.mk)
+#PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -163,15 +163,6 @@ PRODUCT_COPY_FILES += \
     	frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     	frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     	frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
-
-# Ramdisk
-PRODUCT_PACKAGES += \
-    	fstab.hi6210sft \
-    	init.chip.usb.rc \
-    	init.hi6210sft.rc \
-    	init.hi6210sft.usb.rc \
-    	init.rc \
-    	ueventd.hi6210sft.rc
 
 # Teec
 PRODUCT_PACKAGES += \
